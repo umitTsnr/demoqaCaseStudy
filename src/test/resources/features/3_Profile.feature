@@ -53,6 +53,8 @@ Feature:Testing the functions of the book store page
     Then Verify that all books are remove from the collection
 
 
+
+
   Scenario:User can delete books from collection
     When User enters a valid username
     And User enters a valid password
