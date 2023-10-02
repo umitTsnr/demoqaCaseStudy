@@ -8,6 +8,7 @@ Feature:Testing the functions of the book store page
     And User clicks login button on books store page
     Then Verify that login page is displayed
 
+
   Scenario:User can add and delete single book on the profile page
     When User enters a valid username
     And User enters a valid password
@@ -27,7 +28,6 @@ Feature:Testing the functions of the book store page
     And User clicks ok button on the alert
     Then Verify that all books are remove from the collection
 
-  @wip
   Scenario:User can add and delete multiple books on the profile page
     When User enters a valid username
     And User enters a valid password
@@ -45,30 +45,12 @@ Feature:Testing the functions of the book store page
     And Click okey button on the alert
     And Click on profile title
     Then Verify that the profile page is displayed
-    #Then Verify that the selected product has been added to your collection
     And User deletes all product from the collection
     And User clicks ok button on the popup window
     Then Verify that all books deleted Alert message is displayed
     And User clicks ok button on the alert
     Then Verify that all books are remove from the collection
-
-
-
-
-  Scenario:User can delete books from collection
-    When User enters a valid username
-    And User enters a valid password
-    And User clicks login button on login page
-    Then Verify that user logged in successfully
-    And Click on a product of your choice
-    Then Verify that the detail page for the product is displayed
-    And Click the button to add the product to your collection
-    Then Verify that the product added popup is displayed
-    And Click on the okey button in the popup
-    And Click on profile title
-    Then Verify that the profile page is displayed
-    Then Verify that the selected product has been added to your collection
-
+  @wip
   Scenario:User can change row number on profile page
     When User enters a valid username
     And User enters a valid password

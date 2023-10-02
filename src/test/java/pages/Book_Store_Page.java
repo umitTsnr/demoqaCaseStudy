@@ -1,13 +1,11 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import utilities.Browser_Utils;
 import utilities.Config_Reader;
 import utilities.Driver;
-
 import java.util.List;
 
 
@@ -39,12 +37,7 @@ public class Book_Store_Page extends Base_Page {
     public WebElement product2;
 
 
-
-
-
-
-
-
+    //=========================================================================================================
 
 
     public void navigateToBooksStorePage(){
@@ -75,15 +68,6 @@ public class Book_Store_Page extends Base_Page {
         }
         return containsText;
     }
-
-
-
-
-
-
-
-
-
 
 
 }

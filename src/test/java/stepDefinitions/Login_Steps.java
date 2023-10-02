@@ -1,14 +1,11 @@
 package stepDefinitions;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.Login_Page;
 import utilities.Browser_Utils;
 import utilities.Config_Reader;
-import utilities.Driver;
 
 
 public class Login_Steps {
@@ -79,23 +76,18 @@ public class Login_Steps {
     }
 
 
-
     @Then("Verify that the user cannot log in")
     public void Verify_that_the_user_cannot_log_in() {
 
-        Browser_Utils.verifyElementDisplayed(loginPage.invalidInputBox);
-      //  System.out.println("loginPage.invalidInputBox.getAttribute(\"class\") = " + loginPage.invalidInputBox.getAttribute("class"));
-      //  Assert.assertTrue(loginPage.checkForInvalidCredentials());
-
-
-
-
-
-
-
-
+        Browser_Utils.verifyElementDisplayed(loginPage.invalidMessage);
     }
 
 
+    @Then("Verify that the user cannot log in with empty credentials")
+    public void verifyThatTheUserCannotLogInWithEmptyCredentials() {
+
+        Browser_Utils.verifyElementDisplayed(loginPage.invalidInputBox);
+    }
 
 }
+

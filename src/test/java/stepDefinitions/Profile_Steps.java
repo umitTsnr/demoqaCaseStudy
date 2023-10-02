@@ -2,12 +2,9 @@ package stepDefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.junit.Assert;
-import pages.Login_Page;
 import pages.Profile_Page;
 import utilities.Browser_Utils;
-import utilities.Config_Reader;
 import utilities.Driver;
 
 
@@ -104,11 +101,13 @@ public class Profile_Steps {
         Browser_Utils.verifyElementDisplayed(profilePage.product1);
     }
 
+
     @And("User deletes product from the collection")
     public void userDeletesProductFromTheCollection() {
 
         Browser_Utils.clickOnElement(profilePage.deleteIcon);
     }
+
 
     @And("User clicks ok button on the popup window")
     public void userClicksOkButtonOnThePopupWindow() {
@@ -116,22 +115,20 @@ public class Profile_Steps {
         Browser_Utils.clickOnElement(profilePage.deletePopupOkButton);
     }
 
+
     @Then("Verify that book deleted Alert message is displayed")
     public void verifyThatBookDeletedAlertMessageIsDisplayed() {
 
         Browser_Utils.waitFor(2);
         String deletedText = Driver.getDriver().switchTo().alert().getText();
         Assert.assertEquals("Book deleted.", deletedText);
-
     }
+
 
     @And("User clicks ok button on the alert")
     public void userClicksOkButtonOnTheAlert() {
 
         Driver.getDriver().switchTo().alert().accept();
-
-
-
     }
 
 
@@ -142,6 +139,7 @@ public class Profile_Steps {
         Browser_Utils.clickOnElement(profilePage.deleteAllBooksButton);
     }
 
+
     @Then("Verify that all books deleted Alert message is displayed")
     public void verifyThatAllBooksDeletedAlertMessageIsDisplayed() {
 
@@ -150,10 +148,11 @@ public class Profile_Steps {
         Assert.assertEquals("All Books deleted.", deletedText);
     }
 
+
     @Then("Verify that all books are remove from the collection")
     public void verifyThatAllBooksAreRemoveFromTheCollection() {
 
         Browser_Utils.verifyElementDisplayed(profilePage.noRowsFoundTitle);
-
     }
+
 }

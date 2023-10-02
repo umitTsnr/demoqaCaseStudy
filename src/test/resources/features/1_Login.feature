@@ -31,13 +31,25 @@ Feature:Testing the functions of the login page
 
     Examples:
       | username    | password |
-      |             |          |
       | abcdef      | Test!!10 |
       | qa_engineer | 123456   |
       | <>*+$@      | AAbb1122 |
       | aa bb cc    | 11 22 33 |
-      | qa_engineer |          |
+
+  @wip
+  Scenario Outline: User can not log in with empty credentials
+    When Enter an invalid "<username>" in the username input box
+    And Enter an invalid "<password>" in the password input box
+    And User clicks login button on login page
+    Then Verify that the user cannot log in with empty credentials
+
+    Examples:
+      | username    | password |
       |             | Test!!10 |
+      | qa_engineer |          |
+      |             |          |
+
+
 
 
 

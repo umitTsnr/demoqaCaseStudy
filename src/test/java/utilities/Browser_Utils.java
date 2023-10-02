@@ -22,6 +22,7 @@ public class Browser_Utils {
         }
     }
 
+
     public static boolean isElementPresent(WebElement element, int seconds) {
 
         try {
@@ -65,7 +66,6 @@ public class Browser_Utils {
     }
 
 
-
     public static void scrollToElement(WebElement element) {
         ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
     }
@@ -77,27 +77,12 @@ public class Browser_Utils {
     }
 
 
-
-
-
-
-
-
-    public static void verifyTitle(String expectedTitle){
-
-        Assert.assertEquals(Driver.getDriver().getTitle(), expectedTitle);
-
-    }
-
-
-
     public static void verifyElementDisplayed(WebElement element) {
         try {
             Assert.assertTrue("Element not visible: " + element, element.isDisplayed());
         } catch (NoSuchElementException e) {
             e.printStackTrace();
             Assert.fail("Element not found: " + element);
-
         }
     }
 

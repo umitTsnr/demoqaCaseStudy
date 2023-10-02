@@ -3,8 +3,6 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utilities.Browser_Utils;
-import utilities.Config_Reader;
 import utilities.Driver;
 
 import java.util.List;
@@ -52,6 +50,7 @@ public class Profile_Page extends Base_Page {
     public WebElement noRowsFoundTitle;
 
 
+    //=========================================================================================================
 
 
     public int verifyRowCount() {
@@ -59,15 +58,6 @@ public class Profile_Page extends Base_Page {
         List<WebElement> searchResultsLists = Driver.getDriver().findElements(By.xpath("//div[@class='rt-tr-group']"));
         return searchResultsLists.size();
     }
-
-
-
-
-
-
-
-
-
 
 
 }

@@ -23,10 +23,13 @@ public class Hooks {
     public void tearDown(Scenario scenario) {
 
         System.out.println("Scenario is ending... ");
+
         if(scenario.isFailed()){
             final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot,"image/png","screenshot");
         }
+
         Driver.closeDriver();
     }
+
 }

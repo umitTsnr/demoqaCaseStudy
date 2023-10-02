@@ -8,6 +8,4 @@ public abstract class Base_Page {
     public Base_Page() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
-
 }

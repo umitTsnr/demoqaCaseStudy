@@ -9,7 +9,6 @@ public class Config_Reader {
 
     private static Properties properties;
 
-
     static {
 
         try {

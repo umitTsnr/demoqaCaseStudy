@@ -5,14 +5,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
-
 import java.time.Duration;
+
 
 public class Driver {
 
-
-    private Driver() {
-    }
+    private Driver() {}
 
     private static WebDriver driver;
 
@@ -20,9 +18,7 @@ public class Driver {
 
         if (driver == null) {
 
-
             String browserType = Config_Reader.get("browser");
-
 
             switch (browserType) {
                 case "chrome": {
@@ -53,7 +49,6 @@ public class Driver {
                     // Handle the case when browserType doesn't match any of the cases
                     throw new IllegalArgumentException("Invalid browserType: " + browserType);
                 }
-
             }
         }
 

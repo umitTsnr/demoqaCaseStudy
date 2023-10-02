@@ -8,6 +8,7 @@ Feature:Testing the functions of the book store page
     And User clicks login button on books store page
     Then Verify that login page is displayed
 
+
   Scenario:User searches and lists search results accurately
     When User enters a valid username
     And User enters a valid password
@@ -18,7 +19,7 @@ Feature:Testing the functions of the book store page
     And Delete text in search bar
     And User enters design text in the search bar
     Then Verify that the search results match the design text entered
-
+  @wip
   Scenario:Irrelevant search results are not listed
     When User enters a valid username
     And User enters a valid password

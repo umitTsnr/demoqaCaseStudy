@@ -35,6 +35,7 @@ public class Login_Page extends Base_Page {
     public WebElement invalidInputBox;
 
 
+    //=========================================================================================================
 
 
     public void navigateToBooksStorePage(){
@@ -42,18 +43,6 @@ public class Login_Page extends Base_Page {
         Driver.getDriver().get(Config_Reader.get("url"));
         Browser_Utils.waitFor(1);
     }
-
-
-    public boolean checkForInvalidCredentials(){
-
-        if (invalidMessage.isDisplayed() || invalidInputBox.getAttribute("class").equals("mr-sm-2 is-invalid form-control")) {
-            return true;
-
-        } else {
-            return false;
-        }
-    }
-
 
 
 }
